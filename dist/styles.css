@@ -17,6 +17,17 @@
     gap: 10px;
 }
 
+#search-bar {
+    width: 30vw;
+    height: 2.5vh;
+}
+
+.submit-btn {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
 /* Toggle temperature type */
 .toggle {
     --width: 75px;
