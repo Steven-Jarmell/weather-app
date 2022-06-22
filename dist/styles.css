@@ -10,7 +10,7 @@
 }
 
 /* Search Bar */
-.city-input {
+#searchForm {
     display: flex;
     justify-content: center;
     align-items: center;
