@@ -11,7 +11,7 @@
     <body>
         <div class="content">
             <form class="form" id="searchForm" novalidate>
-                <input type="text" id="search-bar" name="user-search" placeholder="Pittsburgh">
+                <input type="text" id="search-bar" name="user-search" placeholder="Enter City Name">
                 <button class="submit-btn" type="submit">
                     <span class="material-symbols-outlined">search</span>
                 </button>
@@ -21,15 +21,13 @@
                 <p class="temperature"></p>
                 <p class="feelsLike"></p>
                 <p class="humidity"></p>
-                <p class="wind"></p>
             </div>
             <label class="toggle">
-                <input type="checkbox">
+                <input class='toggle-input' type="checkbox">
                 <span class="slider"></span>
-                <span class="labels" data-on="°F" data-off="°C"></span>
+                <span class="labels" data-on="°C" data-off="°F"></span>
             </label>
         </div>
     </body>
-    <script type='text/javascript' src='../config.js'></script>
-    <script src="main.js"></script>
+    <script src="./main.js"></script>
 </html>
