@@ -1,12 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 :root {
     --color-blue: rgb(185, 229, 255);
+    --color-red: rgb(255, 58, 58);
+    font-family: 'Roboto', sans-serif;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
 }
 
 .content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    padding: 25px;
+    gap: 10vh;
+    height: 100vh;
+    background-color: antiquewhite;
 }
 
 /* Search Bar */
@@ -15,16 +28,19 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+    padding: 20px;
 }
 
 #search-bar {
     width: 30vw;
-    height: 2.5vh;
+    height: 4vh;
+    border-radius: 10px;
+    border: 1px solid black;
 }
 
 .submit-btn {
     border: none;
-    background-color: white;
+    background-color: transparent;
     cursor: pointer;
 }
 
@@ -39,6 +55,7 @@
     height: var(--height);
     border-radius: var(--height);
     cursor: pointer;
+    
 }
 
 /* Gets rid of the actual checkbox */
@@ -67,17 +84,17 @@
     height: calc(var(--height)*0.6);
     border-radius: calc(var(--height) / 2);
     border: 3px solid var(--color-blue);
-    background-color: #c5c3c3;
+    background-color: var(--color-blue);
     transition: all 0.4s ease-in-out;
 }
 
 .toggle input:checked+.slider {
-    border-color: #2196F3;
+    border-color: var(--color-red);
 }
 
 .toggle input:checked+.slider::before {
-    border-color: #2196F3;
-    background-color: #c6e5ff;
+    border-color: var(--color-red);
+    background-color: var(--color-red);
     transform: translateX(calc(var(--width) - var(--height)));
 }
 
@@ -115,4 +132,17 @@
 
 .toggle input:checked~.labels::before {
     opacity: 1;
+}
+
+/* Search Result */
+
+.search-result {
+    background-color: white;
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+
+.visible {
+    padding: 30px;
+    border: 1px solid black;
 }
