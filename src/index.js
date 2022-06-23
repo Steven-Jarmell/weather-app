@@ -25,8 +25,8 @@ submitBtn.addEventListener('click', async (e) => {
         feelsLike.innerText = convertToFahrenheit(data.feelsLike);
     }
     else {
-        temperature.innerText = data.temperature;
-        feelsLike.innerText = data.feelsLike;
+        temperature.innerText = Math.round(data.temperature);
+        feelsLike.innerText = Math.round(data.feelsLike);
     }
 
     const humidity = document.querySelector('.humidity');
@@ -47,9 +47,9 @@ mode.addEventListener('click', (e) => {
 });
 
 function convertToFahrenheit(number) {
-    return Math.round((number * (9/5) + 32) * 100)/100;
+    return Math.round(number * (9/5) + 32);
 }
 
 function convertToCelsius(number) {
-    return Math.round((number - 32) * (5/9) * 100)/100;
+    return Math.round((number - 32) * (5/9));
 }
